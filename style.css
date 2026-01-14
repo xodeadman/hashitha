@@ -13,49 +13,83 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .container {
   text-align: center;
-  animation: float 4s ease-in-out infinite;
+  animation: fadeIn 1.5s ease forwards;
 }
 
 .title {
   font-size: 3rem;
-  color: #2f2f2f;
-}
-
-.title span {
   color: #ff5fa2;
 }
 
 .subtitle {
   margin-top: 10px;
-  font-size: 1.1rem;
   color: #555;
 }
 
 .btn {
   margin-top: 25px;
-  padding: 12px 28px;
-  font-size: 1rem;
+  padding: 14px 32px;
   border: none;
   border-radius: 30px;
   background: #ff5fa2;
   color: white;
+  font-size: 1rem;
   cursor: pointer;
   box-shadow: 0 10px 25px rgba(255, 95, 162, 0.4);
-  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(255, 95, 162, 0.6);
+  transform: scale(1.05);
 }
 
-@keyframes float {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-  100% { transform: translateY(0); }
+/* POPUP */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
+  display: none;
+  justify-content: center;
+  align-items: center;
 }
+
+.letter {
+  background: #fff;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: 20px;
+  animation: popIn 0.6s ease forwards;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+}
+
+.letter p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.close {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #ff5fa2;
+  color: white;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
