@@ -9,4 +9,9 @@ btn.addEventListener("click", () => {
 closeBtn.addEventListener("click", () => {
   overlay.style.display = "none";
 });
-
+// flip cards on tap
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("click", () => {
+    card.classList.toggle("flipped");
+  });
+});
