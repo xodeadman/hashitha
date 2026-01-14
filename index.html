@@ -8,96 +8,84 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1 class="title">Hashitha ✨</h1>
-    <p class="subtitle">this is for you, always</p>
-    <button class="btn">open letter 💌</button>
+  <!-- LANDING -->
+  <div class="landing">
+    <h1>Hashitha ✨</h1>
+    <p>this is something I made just for you</p>
+    <button id="openLetter">open letter 💌</button>
   </div>
 
-  <!-- POPUP -->
+  <!-- LETTER POPUP -->
   <div class="overlay" id="overlay">
     <div class="letter">
       <p>
         Hey Hashitha 💕<br><br>
 
-        I just wanted to take a moment to say this —  
-        I’m genuinely so grateful for you 💗<br><br>
+        I’ve been wanting to say this for a while,  
+        and I thought I’d do it in my own little way 💗<br><br>
 
-        Your presence, your energy, the way you exist  
-        makes things feel lighter, warmer, better ✨<br><br>
+        I’m genuinely so grateful for you —  
+        for your presence, your energy, and the way you exist ✨<br><br>
 
-        You have no idea how much love you bring  
-        just by being you 🫶<br><br>
-
-        I admire you, I care about you,  
-        and I appreciate you more than words can say 💋<br><br>
+        You make things feel warmer, calmer,  
+        and a lot more meaningful than you probably realize 💞<br><br>
 
         This wasn’t random.  
-        This was made with intention,  
-        with love, and with a full heart 💖<br><br>
+        Every part of this was made with intention,  
+        with care, and with a full heart 💋<br><br>
 
-        Always cheering for you,  
-        always grateful for you 💞
+        Thank you for being you,  
+        for being someone I truly appreciate,  
+        and for being someone I care about deeply 💕<br><br>
+
+        Always rooting for you,  
+        always grateful for you 🌷
       </p>
 
-      <button class="close">close 💗</button>
+      <button id="closeLetter">close 💗</button>
     </div>
   </div>
+
+  <!-- CARDS (HIDDEN INITIALLY) -->
+  <section class="cards-section hidden" id="cards">
+    <h2>Some Little Moments 💞</h2>
+
+    <div class="cards">
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="card1.jpg">
+          </div>
+          <div class="card-back">
+            You make my days brighter 💕
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="card2.jpg">
+          </div>
+          <div class="card-back">
+            I appreciate you more than I say 💗
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="card3.jpg">
+          </div>
+          <div class="card-back">
+            You genuinely mean a lot to me 💋
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <script src="script.js"></script>
-  <!-- FLIP CARDS SECTION -->
-<section class="cards-section">
-  <h2>Some Special Cards For You ✨</h2>
-  <p class="cards-sub">Tap any card to reveal a message 💕</p>
-
-  <div class="cards">
-    <!-- CARD 1 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="card1.jpg" alt="card one">
-        </div>
-        <div class="card-back">
-          <p>
-            You make everything feel softer and warmer 💗  
-            I’m endlessly grateful for you.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="card2.jpg" alt="card two">
-        </div>
-        <div class="card-back">
-          <p>
-            Loving you feels natural, calm, and real 💕  
-            I appreciate you more than you know.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="card">
-      <div class="card-inner">
-        <div class="card-front">
-          <img src="card3.jpg" alt="card three">
-        </div>
-        <div class="card-back">
-          <p>
-            No matter what, I’m thankful  
-            that you’re part of my world 💋
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <p class="tap-hint">Start by tapping any card above ✨</p>
-</section>
 </body>
 </html>
