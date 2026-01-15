@@ -1,17 +1,19 @@
-const btn = document.querySelector(".btn");
+const openBtn = document.getElementById("openLetter");
+const closeBtn = document.getElementById("closeLetter");
 const overlay = document.getElementById("overlay");
-const closeBtn = document.querySelector(".close");
+const cards = document.getElementById("cards");
 
-btn.addEventListener("click", () => {
-  overlay.style.display = "flex";
-});
+openBtn.onclick = () => {
+  overlay.classList.remove("hidden");
+};
 
-closeBtn.addEventListener("click", () => {
-  overlay.style.display = "none";
-});
-// flip cards on tap
+closeBtn.onclick = () => {
+  overlay.classList.add("hidden");
+  cards.classList.remove("hidden");
+};
+
 document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("click", () => {
+  card.onclick = () => {
     card.classList.toggle("flipped");
-  });
+  }
 });
