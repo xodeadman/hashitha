@@ -1,92 +1,77 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: system-ui, sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #ffd6e8, #e0c3fc);
-  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #ffd6e8, #e9d5ff);
   text-align: center;
+  color: #333;
 }
 
 /* LANDING */
 .landing {
-  padding: 100px 20px;
-}
-
-.landing h1 {
-  font-size: 3rem;
-  color: #ff5fa2;
-}
-
-.landing p {
-  margin-top: 10px;
-  color: #555;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 14px;
 }
 
 button {
-  margin-top: 25px;
-  padding: 12px 30px;
+  background: #ff6fae;
   border: none;
-  border-radius: 30px;
-  background: #ff5fa2;
+  padding: 12px 22px;
+  border-radius: 999px;
   color: white;
   font-size: 16px;
   cursor: pointer;
 }
 
-/* LETTER POPUP */
+/* LETTER */
 .overlay {
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,0.4);
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .letter {
   background: white;
-  padding: 40px;
-  border-radius: 25px;
-  width: 92%;
+  padding: 28px;
   max-width: 520px;
-  font-size: 1.05rem;
-  line-height: 1.7;
+  border-radius: 18px;
+  text-align: left;
+  line-height: 1.6;
 }
 
 /* CARDS */
-.cards-section {
-  padding: 60px 20px;
-  animation: fadeUp 1s ease forwards;
-}
-
-.hidden {
-  display: none;
-}
-
 .cards {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 30px;
+  padding: 50px 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  max-width: 600px;
+  margin: 30px auto;
 }
 
 .card {
-  width: 250px;
-  height: 160px;
   perspective: 1000px;
 }
 
 .card-inner {
+  position: relative;
   width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
+  height: 200px;
   transform-style: preserve-3d;
-  cursor: pointer;
+  transition: transform 0.6s;
 }
 
 .card.flipped .card-inner {
@@ -96,30 +81,31 @@ button {
 .card-front,
 .card-back {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 18px;
+  inset: 0;
   backface-visibility: hidden;
-  overflow: hidden;
+  border-radius: 16px;
 }
 
 .card-front img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  pointer-events: none;
+  border-radius: 16px;
 }
 
 .card-back {
-  background: white;
+  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 14px;
   transform: rotateY(180deg);
 }
 
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+.hidden {
+  display: none;
+}
+
+.hint {
+  opacity: 0.7;
 }
