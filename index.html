@@ -9,36 +9,34 @@
 <body>
 
   <!-- LANDING -->
-  <div class="landing">
+  <section class="landing">
     <h1>Hashitha ✨</h1>
-    <p>this is something I made just for you</p>
+    <p>this is for you, always</p>
     <button id="openLetter">open letter 💌</button>
-  </div>
+  </section>
 
-  <!-- LETTER POPUP -->
-  <div class="overlay" id="overlay">
+  <!-- LETTER OVERLAY -->
+  <div class="overlay hidden" id="overlay">
     <div class="letter">
       <p>
         Hey Hashitha 💕<br><br>
 
-        I’ve been wanting to say this for a while,  
-        and I thought I’d do it in my own little way 💗<br><br>
+        I just wanted to take a moment to say this properly 💖<br><br>
 
         I’m genuinely so grateful for you —  
-        for your presence, your energy, and the way you exist ✨<br><br>
+        for your presence, your energy, and the comfort you bring ✨<br><br>
 
-        You make things feel warmer, calmer,  
-        and a lot more meaningful than you probably realize 💞<br><br>
+        You have no idea how much warmth you add  
+        just by being yourself 💞<br><br>
+
+        I admire you more than I say,  
+        and I appreciate you in ways words don’t always capture 💌<br><br>
 
         This wasn’t random.  
-        Every part of this was made with intention,  
-        with care, and with a full heart 💋<br><br>
+        This was made with intention,  
+        with love, and with a very full heart 💖<br><br>
 
-        Thank you for being you,  
-        for being someone I truly appreciate,  
-        and for being someone I care about deeply 💕<br><br>
-
-        Always rooting for you,  
+        Always cheering for you,  
         always grateful for you 🌷
       </p>
 
@@ -46,18 +44,19 @@
     </div>
   </div>
 
-  <!-- CARDS (HIDDEN INITIALLY) -->
-  <section class="cards-section hidden" id="cards">
-    <h2>Some Little Moments 💞</h2>
+  <!-- CARDS -->
+  <section class="cards hidden" id="cards">
+    <h2>Some Special Cards For You ✨</h2>
+    <p>Tap any card to reveal a message 💕</p>
 
-    <div class="cards">
+    <div class="card-grid">
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="card1.jpg">
+            <img src="card1.jpg" />
           </div>
           <div class="card-back">
-            You make my days brighter 💕
+            You make everything softer just by being around 💖
           </div>
         </div>
       </div>
@@ -65,10 +64,10 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="card2.jpg">
+            <img src="card2.jpg" />
           </div>
           <div class="card-back">
-            I appreciate you more than I say 💗
+            I notice the little things you do — and they mean everything 💕
           </div>
         </div>
       </div>
@@ -76,14 +75,16 @@
       <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="card3.jpg">
+            <img src="card3.jpg" />
           </div>
           <div class="card-back">
-            You genuinely mean a lot to me 💋
+            This is me, always rooting for you 🫶
           </div>
         </div>
       </div>
     </div>
+
+    <p class="hint">Start by tapping any card above ✨</p>
   </section>
 
   <script src="script.js"></script>
